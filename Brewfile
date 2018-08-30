@@ -1,43 +1,41 @@
-cask_args appdir: '/Applications'
-
-tap 'homebrew/bundle'
-tap 'puma/puma'
-
-brew 'ack'
-brew 'coreutils'
-brew 'go'
-brew 'grc'
-brew 'imagemagick'
-brew 'jp2a'
-brew 'jq'
-brew 'libcaca', args: ['with-imlib2']
-brew 'libgit2'
-brew 'openssl'
-brew 'node'
-brew 'readline'
-brew 'postgresql'
-brew 'puma/puma/puma-dev'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'roundup'
-brew 'spaceman-diff'
-brew 'spark'
-brew 'unrar'
-brew 'wget'
-brew 'yarn'
-brew 'youtube-dl'
-
-cask '1password'
-cask 'adium'
-cask 'atom'
-cask 'firefox'
-cask 'garmin-express'
-cask 'google-chrome'
-cask 'handbrake'
-cask 'mapbox-studio'
-cask 'seashore'
-cask 'slack'
-cask 'steam'
-cask 'transmission'
-cask 'tunnelbear'
-cask 'vlc'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+brew "ack"
+brew "openssl"
+brew "python@2"
+brew "ansible"
+brew "python"
+brew "awscli"
+brew "bash-completion"
+brew "binutils"
+brew "cargo-completion"
+brew "coreutils"
+brew "go"
+brew "dep"
+brew "diffutils"
+brew "e2fsprogs"
+brew "findutils", args: ["with-default-names"]
+brew "git"
+brew "git-crypt"
+brew "gnu-sed", args: ["with-default-names"]
+brew "gnutls"
+brew "gnupg"
+brew "grep", args: ["with-default-names"]
+brew "gzip"
+brew "htop"
+brew "hub"
+brew "jq"
+brew "kubernetes-helm"
+brew "nmap"
+brew "ruby-build"
+brew "rbenv"
+brew "stern"
+brew "tree"
+brew "vim", args: ["with-lua", "with-luajit"]
+brew "watch"
+brew "wget"
+brew "zsh"
+cask "atom"
+cask "docker-edge"
