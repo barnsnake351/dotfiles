@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+: ${GIT_PROMPT_BASE_DIR:="${HOME}/.bash-git-prompt"}
+if [ -f ${GIT_PROMPT_BASE_DIR}/gitprompt.sh ]
+then
+    GIT_PROMPT_THEME=Solarized_Barnsnake
+    source ${GIT_PROMPT_BASE_DIR}/gitprompt.sh
+fi

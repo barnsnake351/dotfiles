@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Go
+#
+# Configure GO environment vars
+# Assumes go has been installed and maintained via Homebrew on OSX
+
+# Test if brew's go is installed and exit if not found
+[ "$(brew list go)" ] || echo "exit 0"
+
+# Configure GOHOME
+export GOPATH="${HOME}/go"
+export GOBIN=/usr/local/bin
+
+[ $(echo "${PATH}" | grep ":$(brew --prefix go)/bin") ] || export PATH="${PATH/:\/bin/:$(brew --prefix go)/bin:/bin}"
+[ $(echo "${PATH}" | grep ":${GOBIN}") ] || export PATH="${PATH}:${GOBIN}"

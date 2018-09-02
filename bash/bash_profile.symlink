@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+export PATH="/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+: ${BASH_SCRIPTS:="${HOME}/.bash_scripts"}
+function source_files() {
+    # $1 == directory to source
+    [[ -z "${1}" ]] && return 1
+    if [[ $(ls -v ${1} 2>/dev/null) ]]
+    then
+        for f in $(ls -v ${1})
+        do
+            source "${f}"
+        done
+    fi
+    return 0
+}
+
+source_files "${BASH_SCRIPTS}/exports/*"
+source_files "${BASH_SCRIPTS}/functions/*"
+source_files "${BASH_SCRIPTS}/aliases/*"
+source_files "${BASH_SCRIPTS}/integrations/*"
+
+# Python Virtualenv configuration
+export WORKON_HOME=${HOME}/.virtualenvs
+export PROJECT_HOME=${HOME}/venv_projects
+[[ ! -d ${WORKON_HOME} ]] && mkdir -p ${WORKON_HOME}
+[[ ! -d ${PROJECT_HOME} ]] && mkdir -p ${PROJECT_HOME}
+source /usr/local/bin/virtualenvwrapper.sh
