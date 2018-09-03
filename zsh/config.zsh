@@ -1,5 +1,6 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+export COMPLETION_WAITING_DOTS=true
 
 fpath=($ZSH/functions $fpath)
 
