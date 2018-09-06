@@ -13,3 +13,4 @@ git/gitconfig.local.symlink
 
 cache/
 !cache/.keep
+rust/_rustup

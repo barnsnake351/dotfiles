@@ -33,6 +33,7 @@ brew "kubernetes-helm"
 brew "nmap"
 brew "ruby-build"
 brew "rbenv"
+brew "rustup"
 brew "stern"
 brew "tree"
 brew "vim", args: ["with-lua", "with-override-system-vi"]

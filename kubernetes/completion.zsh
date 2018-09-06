@@ -3,9 +3,9 @@
 
 [[ $(which kubectl) ]] || return 0
 
-completion=$(kubectl completion zsh)
+kube_completions=$(kubectl completion zsh)
 
-if test -f $completion
+if test -f $kube_completions
 then
-    source $completion
+    source $kube_completions
 fi
