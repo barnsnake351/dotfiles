@@ -13,4 +13,7 @@ git/gitconfig.local.symlink
 
 cache/
 !cache/.keep
-rust/_rustup
+docker/_*
+rust/_*
+kubernetes/_*
+python/_*

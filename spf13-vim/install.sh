@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
+#/bin/sh
 
 : ${SPF13_SHORT_URL:=https://bit.ly/bsnake-vim}
 
-sh <(curl -s ${SPF13_SHORT_URL} -L)
+curl -s ${SPF13_SHORT_URL} -L | sh

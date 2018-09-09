@@ -16,7 +16,6 @@ fi
 if [[ -e ${rustup_bin} ]]
 then
     ${rustup_bin} update
-    ${rustup_bin} completions zsh > ${ZSH}/rust/_rustup
     ${rustup_bin} toolchain install nightly
 
     # Configure additional targets
@@ -43,5 +42,9 @@ then
         [[ $(${rustup_bin} run stable cargo --list) ]] || ${rustup_bin} run stable cargo install ${ct}
     done
 fi
+
+# Regenerate completions file
+source ${ZSH}/rust/completion.zsh
+_regenerate_rust_completions
 
 unset rust_toolchain rustup_bin rust_components cargo_tools
