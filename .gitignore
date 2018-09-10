@@ -17,3 +17,4 @@ docker/_*
 rust/_*
 kubernetes/_*
 python/_*
+antigen/*.zwc

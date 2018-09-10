@@ -22,7 +22,7 @@ then
     antigen bundle zsh-users/zsh-syntax-highlighting
     antigen bundle zsh-users/zsh-completions
 
-    antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+    antigen theme https://github.com/barnsnake351/spaceship-prompt spaceship
 
     antigen apply
 fi
