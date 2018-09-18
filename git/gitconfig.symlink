@@ -1,6 +1,6 @@
-# Local/private config goes in the include
-[include]
-        path = ~/.gitconfig.local
+# Conditional includes for personal/work
+[includeIf "gitdir:~/code/wrk/"]
+    path = ~/.gitconfig-work
 
 [includeIf "gitdir:~/code/barnsnake351/"]
     path = ~/.gitconfig-barnsnake351
