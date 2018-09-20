@@ -29,8 +29,8 @@ do
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit && compinit
-autoload -U bashcompinit && bashcompinit
+autoload -U compinit && compinit -d $HOME/.zcompdump-$ZSH_VERSION
+autoload -U bashcompinit && bashcompinit -d $HOME/.cache/.zcompdump-bash-$ZSH_VERSION
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -39,6 +39,16 @@ do
 done
 
 unset config_files
+
+## load any dynamic completions here
+#typeset -U completion_files
+#completion_files=($ZSH/**/*.completions)
+#for file in ${(M)completion_files:#*/_*.completions}
+#do
+    #source $file
+#done
+
+#unset completion_files
 
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys

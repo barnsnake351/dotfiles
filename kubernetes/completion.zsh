@@ -1,37 +1,27 @@
-# Configure some helper functions for sourcing completions
+# Config some helper functions for sourcing completions
 
-k8s_base="${ZSH}/kubernetes/"
+completions_base="$ZSH/cache"
+
+function _generate_generic_k8s_completions() {
+    test -z ${1} && return
+    local local_completion_command="completion zsh"
+    test -z ${2} && local_completion_command="${2}"
+    if test $(which ${1})
+    then
+        echo "Generating ${1} completion file"
+        ${1} ${local_completion_command} > "${completions_base}/_${1}"
+    fi
+}
 
 function _regenerate_k8s_completions() {
-    _generate_kubectl_completions
-    _generate_helm_completions
-    _generate_stern_completions
+    _generate_generic_k8s_completions kubectl
+    _generate_generic_k8s_completions helm
+    _generate_generic_k8s_completions stern "--completion zsh"
+
 }
 
-function _generate_kubectl_completions() {
-    if [[ $(which kubectl) ]]
-    then
-        echo "Generating kubectl completion file"
-        kubectl completion zsh > "${k8s_base}/_kubectl"
-    fi
-}
-
-function _generate_stern_completions() {
-    if [[ $(which stern) ]]
-    then
-        echo "Generating stern completion file"
-        stern --completion zsh > "${k8s_base}/_stern"
-    fi
-}
-function _generate_helm_completions() {
-    if [[ $(which helm) ]]
-    then
-        echo "Generating helm completion file"
-        helm completion zsh > "${k8s_base}/_helm"
-    fi
-}
 
 # Check for existing completions
-[[ -e "${k8s_base}/_kubectl" ]] || _generate_kubectl_completions
-[[ -e "${k8s_base}/_stern" ]] || _generate_stern_completions
-[[ -e "${k8s_base}/_helm" ]] || _generate_helm_completions
+#test -f "${completions_base}/_kubectl" || _generate_generic_k8s_completions kubectl
+#test -f "${completions_base}/_helm" || _generate_generic_k8s_completions helm
+#test -f "${completions_base}/_stern" || _generate_generic_k8s_completions stern "--completion zsh"

@@ -1,6 +1,6 @@
 # Configure helper functions for rust
 
-rust_completions_base="${ZSH}/rust"
+completions_base="$HOME/.cache"
 
 function _regenerate_rust_completions() {
     _generate_rustup_completions
@@ -9,7 +9,11 @@ function _regenerate_rust_completions() {
 function _generate_rustup_completions() {
     [[ $(which rustup) ]] || return 0
     echo "Generating rustup completion file"
-    rustup completions zsh > "${rust_completions_base}/_rustup"
+    rustup completions zsh > "${completions_base}/_rustup.completions"
 }
 
-[[ -e "${rust_completions_base}/_rustup" ]] || _generate_rustup_completions
+[[ -e "${completions_base}/_rustup.completions" ]] || _generate_rustup_completions
+if [[ $(which rustup) ]] && [[ ! $(which _rustup) ]]
+then
+    source $completions_base/_rustup.completions
+fi

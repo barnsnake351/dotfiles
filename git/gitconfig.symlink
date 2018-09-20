@@ -3,10 +3,10 @@
         path = ~/.gitconfig-wrk
 
 [includeIf "gitdir:~/code/barnsnake351/"]
-         path = ~/.gitconfig-barnsnake351
+        path = ~/.gitconfig-barnsnake351
 
 [includeIf "gitdir:~/.dotfiles/"]
-         path = ~/.gitconfig-barnsnake351
+        path = ~/.gitconfig-barnsnake351
 
 [hub]
         protocol = https
