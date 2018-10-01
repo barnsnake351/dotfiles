@@ -7,14 +7,15 @@ echo "› sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
 
 # Configure dock settings
-defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock mineffect -string suck
 defaults write comm.apple.dock tilesize -integer 36
 defaults write com.apple.dock largesize -integer 96
-defaults write com.apple.dock autohide-delay 0.5
-defaults write com.apple.dock persistent-apps
-defaults write com.apple.dock persistent-others
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0.5
+defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-others -array
 defaults write com.apple.dock static-only -bool true
+defaults write com.apple.dock minimize-to-application -bool true
 
 # Apply dock settings:
 killall Dock

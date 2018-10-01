@@ -8,10 +8,7 @@ rust_components="rust-src rust-docs rustfmt-preview"
 rust_targets="x86_64-unknown-linux-gnu"
 cargo_tools="rustfmt racer"
 
-if [[ ! -e ${rustup_bin} ]]
-then
-    rustup-init -y --no-modify-path --default-toolchain stable
-fi
+[[ ! -e ${rustup_bin} ]] && rustup-init -y --no-modify-path --default-toolchain stable
 
 if [[ -e ${rustup_bin} ]]
 then
@@ -44,7 +41,7 @@ then
 fi
 
 # Regenerate completions file
-source ${ZSH}/rust/completion.zsh
-_regenerate_rust_completions
+#source ${ZSH}/rust/completion.zsh
+#_regenerate_rust_completions
 
 unset rust_toolchain rustup_bin rust_components cargo_tools

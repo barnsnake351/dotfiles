@@ -1,5 +1,5 @@
 _docker_completions_src_base="/Applications/Docker.app/Contents/Resources/etc"
-_docker_completions_base="${ZSH}/docker"
+_docker_completions_base="${ZSH}/cache"
 _docker_bins="docker docker-compose docker-machine"
 
 function _regenerate_docker_completions() {
