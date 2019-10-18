@@ -8,6 +8,10 @@
 [includeIf "gitdir:~/.dotfiles/"]
         path = ~/.gitconfig-barnsnake351
 
+[includeIf "gitdir:~/.spf13-vim-3/"]
+        path = ~/.gitconfig-barnsnake351
+
+
 [hub]
         protocol = https
 

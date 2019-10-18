@@ -11,7 +11,6 @@ then
     antigen bundle git
     antigen bundle pip
     antigen bundle lein
-    antigen bundle kubectl
     antigen bundle iterm2
     antigen bundle command-not-found
     antigen bundle autojump
@@ -20,7 +19,6 @@ then
     antigen bundle git-flow
 
     antigen bundle zsh-users/zsh-syntax-highlighting
-    antigen bundle zsh-users/zsh-completions
 
     antigen theme https://github.com/barnsnake351/spaceship-prompt spaceship
 
