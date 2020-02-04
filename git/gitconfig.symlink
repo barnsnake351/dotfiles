@@ -11,6 +11,8 @@
 [includeIf "gitdir:~/.spf13-vim-3/"]
         path = ~/.gitconfig-barnsnake351
 
+[includeIf "gitdir:~/code/home/"]
+        path = ~/.gitconfig-home
 
 [hub]
         protocol = https
