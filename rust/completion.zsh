@@ -1,6 +1,7 @@
 # Configure helper functions for rust
 
 completions_base="$HOME/.cache"
+[[ ! -d "${completions_base}" ]] && mkdir -p "${completions_base}"
 
 function _regenerate_rust_completions() {
     _generate_rustup_completions
