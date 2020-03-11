@@ -11,10 +11,13 @@
         "revision": "6174a63485642763f9df3e54403286f775eff8b6"
       },
       "homebrew/core": {
-        "revision": "e03a7e20171ed2fbd9d40b277ab0d9582c0df0d0"
+        "revision": "dda0486e597d56080ffbc1a6276b049a6b1c13c5"
       },
       "homebrew/cask-fonts": {
         "revision": "f0776bb08ddae1720861e2586aeaf7cbee1bbf16"
+      },
+      "derailed/k9s": {
+        "revision": "cbace2dc3b160fdd3507c41199abe756d79ef5b7"
       }
     },
     "brew": {
@@ -914,7 +917,8 @@
       "zsh-autosuggestions": {
         "version": "0.6.4",
         "bottle": false
-      }
+      },
+      "derailed/k9s/k9s": null
     },
     "cask": {
       "iterm2": {
@@ -946,6 +950,12 @@
         "options": {
           "full_name": "karabiner-elements"
         }
+      },
+      "visual-studio-code": {
+        "version": "1.43.0",
+        "options": {
+          "full_name": "visual-studio-code"
+        }
       }
     }
   },
@@ -954,7 +964,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.10",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e03a7e20171ed2fbd9d40b277ab0d9582c0df0d0",
+        "Homebrew/homebrew-core": "dda0486e597d56080ffbc1a6276b049a6b1c13c5",
         "CLT": "11.3.1.0.1.1576735732",
         "Xcode": "11.3",
         "macOS": "10.15.3"
