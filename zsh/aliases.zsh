@@ -1,6 +1,6 @@
 # Remove the interactive mode aliases
-unalias rm
-unalias mv
+unalias rm &> /dev/null
+unalias mv &> /dev/null
 
 alias reload!='. ~/.zshrc'
 

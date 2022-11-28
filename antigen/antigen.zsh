@@ -1,7 +1,8 @@
 # Source and load antigen
 #
 
-antigen_path="/usr/local/opt/antigen/share/antigen/antigen.zsh"
+antigen_path="/opt/homebrew/share/antigen/antigen.zsh"
+#antigen_path="/usr/local/opt/antigen/share/antigen/antigen.zsh"
 
 if test -f "$antigen_path"
 then

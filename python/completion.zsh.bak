@@ -1,6 +1,6 @@
 #!/bin/zsh
-#if type 'pyenv' 2>/dev/null | grep -q 'function'
-if [ $(which pipenv) ]
+if type 'pyenv' 2>/dev/null | grep -q 'function'
+#if [ $(which pipenv) ]
 then
     # Check for existing completions and generate if missing
     [[ -e "${ZSH}/cache/_pipenv" ]] || pipenv --completion > "${ZSH}/cache/_pipenv"
