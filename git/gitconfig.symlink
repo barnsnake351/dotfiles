@@ -57,3 +57,5 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[user]
+	email = 1727607+barnsnake351@users.noreply.github.com
