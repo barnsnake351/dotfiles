@@ -1,10 +1,6 @@
 cask_args appdir: '/Applications'
 
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-tap "homebrew/cask-fonts"
 tap "derailed/k9s"
 
 #brew 'cloudflared'
@@ -25,7 +21,7 @@ brew 'yt-dlp'
 #cask 'arq'
 #cask "aws-vault"
 cask 'diffusionbee'
-cask "docker"
+#cask "docker"
 cask "font-fira-code"
 cask 'handbrake'
 #cask 'messenger'
@@ -58,7 +54,7 @@ brew "binutils"
 brew "coreutils"
 brew "go"
 brew "goreleaser"
-brew "dep"
+#brew "dep"
 brew "diffutils"
 brew "e2fsprogs"
 brew "gh"
