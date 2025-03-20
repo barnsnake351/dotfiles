@@ -1,3 +1,5 @@
+cask_args appdir: '/Applications'
+
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -5,11 +7,46 @@ tap "homebrew/core"
 tap "homebrew/cask-fonts"
 tap "derailed/k9s"
 
-brew "ack"
-brew "antigen"
-brew "autojump"
+#brew 'cloudflared'
+brew 'imagemagick'
+#brew 'postgresql@14'
+#brew 'redis'
+brew 'ruby-build'
+brew 'spaceman-diff'
+brew 'spark'
+#brew 'stripe/stripe-cli/stripe'
+#brew 'stripe/stripe-mock/stripe-mock'
+brew 'wget'
+brew 'yt-dlp'
+
+#cask '1password'
+#cask 'airtable'
+#cask 'android-platform-tools'
+#cask 'arq'
+#cask "aws-vault"
+cask 'diffusionbee'
+cask "docker"
+cask "font-fira-code"
+cask 'handbrake'
+#cask 'messenger'
+#cask 'notion-calendar'
+#cask 'plex'
+cask 'qlvideo'
+cask 'sonos'
+#cask 'transmission'
+cask 'raycast'
+cask 'warp'
+#cask 'whatsapp'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'zed'
+cask 'zoom'
+
+brew 'ack'
+brew 'antigen'
+##brew "autojump"
 brew "openssl"
-brew "python"
+##brew "python"
 brew "pyenv"
 brew "pyenv-virtualenv"
 #brew "pipenv"
@@ -26,13 +63,14 @@ brew "diffutils"
 brew "e2fsprogs"
 brew "gh"
 brew "git"
-brew "git-crypt"
+#brew "git-crypt"
 brew "gnu-sed"
 brew "gnupg"
 brew "gzip"
 brew "htop"
 #brew "hub"
 brew "jq"
+brew 'yq'
 brew "kubernetes-cli"
 brew "helm"
 brew "derailed/k9s/k9s"
@@ -46,10 +84,6 @@ brew "tree"
 brew "vim"
 brew "watch"
 brew "wget"
-brew "zsh"
+#brew "zsh"
 brew "zsh-autosuggestions"
 cask "iterm2"
-cask "aws-vault"
-cask "docker"
-cask "font-fira-code"
-cask "visual-studio-code"

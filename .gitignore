@@ -7,3 +7,4 @@ rust/_*
 kubernetes/_*
 python/_*
 antigen/*.zwc
+Brewfile.lock.json
